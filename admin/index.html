@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pengurusan Sistem</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <header class="dashboard-header">
+        <h1>Pengurusan Sistem</h1>
+        <button onclick="back()">Back</button>
+    </header>
+
+    <main class="dashboard-content">
+
+        <!-- APPROVAL CARD -->
+        <div class="card-wrapper" onclick="openApproval()">
+            <div class="card card-approve"></div>
+            <h3 class="card-title">Kelulusan Pengguna</h3>
+            <p>Approve / Reject user</p>
+        </div>
+
+        <!-- FUTURE CARD -->
+        <div class="card-wrapper">
+            <div class="card"></div>
+            <h3 class="card-title">Pengurusan Peranan</h3>
+            <p>(Coming Soon)</p>
+        </div>
+
+    </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

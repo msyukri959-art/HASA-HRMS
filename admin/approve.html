@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Approval</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="approval-page">
+
+<!-- TOP HEADER -->
+<header class="approval-page-header">
+    <h1>Kelulusan Pengguna Baharu</h1>
+    <button class="back-btn" onclick="back()">⬅ Kembali ke Dashboard</button>
+</header>
+
+<!-- CONTENT CARD -->
+<div class="approval-card">
+    <table class="approval-table">
+        <thead>
+            <tr>
+                <th>Gambar</th>
+                <th>Nama</th>
+                <th>No. Pekerja</th>
+                <th>Jawatan</th>
+                <th>Username</th>
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+    </table>
+</div>
+
+<script src="approve.js"></script>
+
+</body>
+</html>

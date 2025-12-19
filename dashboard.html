@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- HEADER -->
+    <header class="dashboard-header">
+    <h1>HASA-HRMS Dashboard</h1>
+
+    <div class="header-actions">
+        <span id="welcomeUser"></span>
+
+        <!-- IMPORTANT: type="button" -->
+        <button type="button" onclick="goProfile()">Profile</button>
+        <button type="button" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-content">
+
+    <div class="card-wrapper">
+        <div class="card card-hr_image"></div>
+        <h3 class="card-title">Bahagian Pengurusan Sumber Manusia</h3>
+        <p>(BPSM)</p>
+    </div>
+
+    <div class="card-wrapper">
+        <div class="card card-upo_image"></div>
+        <h3 class="card-title">Unit Pembangunan Organisasi</h3>
+        <p>(UPO)</p>
+    </div>
+
+    <div class="card-wrapper">
+        <div class="card card-upps_image"></div>
+        <h3 class="card-title">Unit Pengambilan dan Penempatan Staf</h3>
+        <p>(UPPS)</p>
+    </div>
+
+    <div class="card-wrapper">
+        <div class="card card-pentd_image"></div>
+        <h3 class="card-title">Pentadbiran Am</h3>
+        <p>(Lain-Lain)</p>
+    </div>
+
+    <!-- ✅ ADMIN CARD (ONLY ONE WRAPPER) -->
+    <div class="card-wrapper" id="adminCard" onclick="openSystemManagement()">
+        <div class="card card-pengurusan_image"></div>
+        <h3 class="card-title">Pengurusan Sistem</h3>
+        <p>(Tetapan)</p>
+    </div>
+
+</main>
+
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND LOGO (LEFT SIDE) -->
+<div class="bg-logo">
+    <img src="images/hasahrmslogo.png" alt="HASA Logo">
+</div>
+
+    <!-- SYSTEM TITLE ON BACKGROUND -->
+    <div class="system-title">
+        <h1>HOSPITAL AL-SULTAN ABDULLAH</h1>
+        <p>HUMAN RESOURCE MANAGEMENT SYSTEM (HASA-HRMS)</p>
+    </div>
+
+    <!-- LOGIN BOX -->
+    <div class="login-container">
+        <img src="images/uitmlogo.png" alt="HASA Logo" class="logo">
+        <h2>Login</h2>
+
+<p id="errorMsg" class="error"></p>
+
+<form id="loginForm">
+
+    <!-- USERNAME -->
+    <input type="text" id="username" placeholder="Username" required>
+
+    <!-- PASSWORD WITH EYE ICON -->
+    <div class="password-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle" onclick="togglePassword('password', this)">👁</span>
+    </div>
+
+    <button type="submit">Sign In</button>
+</form>
+
+<p class="link">
+    <a href="forgot.html">Forgot Password?</a>
+</p>
+
+        <p class="link">
+            First time user? <a href="register.html">Register here</a>
+        </p>
+    </div>
+<script src="js/common.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

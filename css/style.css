@@ -1,0 +1,692 @@
+
+/* =======================
+   RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =======================
+   PAGE BACKGROUND
+======================= */
+body {
+    min-height: 100vh;
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../images/background.JPG") no-repeat center center fixed;
+
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =======================
+   BACKGROUND LOGO (LEFT)
+======================= */
+.bg-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+}
+
+.bg-logo img {
+    width: 200px;
+    opacity: 0.9;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+}
+
+/* =======================
+   SYSTEM TITLE
+======================= */
+.system-title {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.system-title h1 {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.system-title p {
+    margin-top: 6px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+/* =======================
+   LOGIN / REGISTER BOX
+======================= */
+.login-container {
+    width: 360px;
+    padding: 30px 25px;
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    animation: fadeSlide 1s ease;
+    z-index: 5;
+}
+
+/* =======================
+   LOGO
+======================= */
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 180px;
+}
+
+/* =======================
+   TITLE INSIDE BOX
+======================= */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* =======================
+   INPUT FIELDS
+======================= */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* =======================
+   PASSWORD TOGGLE
+======================= */
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 40px;
+}
+
+.toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.toggle:hover {
+    opacity: 1;
+}
+
+/* =======================
+   BUTTON
+======================= */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #375bd2;
+}
+
+/* =======================
+   ERROR MESSAGE
+======================= */
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* =======================
+   LINKS
+======================= */
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #68bd61;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* =======================
+   ANIMATION
+======================= */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .system-title h1 {
+        font-size: 22px;
+    }
+
+    .system-title p {
+        font-size: 14px;
+    }
+
+    .system-title {
+        top: 25px;
+    }
+
+    .bg-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+    }
+}
+/* DASHBOARD */
+.dashboard-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-content {
+    flex: 1;
+}
+
+.dashboard-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.dashboard-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    color: white;
+}
+
+.dashboard-header button {
+    padding: 8px 16px;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.dashboard-header button:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+.dashboard-content {
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;     /* controls overall width */
+    margin: 0 auto;       /* centers content */
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 220px;
+    border-radius: 18px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.card-hr_image {
+    background-image: url("../images/hr_image.jpg");
+}
+
+.card-upo_image {
+    background-image: url("../images/upo_image.jpg");
+}
+
+.card-upps_image {
+    background-image: url("../images/upps_image.jpg");
+}
+
+.card-pentd_image {
+    background-image: url("../images/pentd_image.jpg");
+}
+
+.card-pengurusan_image {
+    background-image: url("../images/pengurusan_image.jpg");
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(6px);
+
+    z-index: 1;
+}
+
+.card h3,
+.card p {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+.card-wrapper {
+    text-align: center;
+}
+
+.card-title {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#profilePhoto {
+    width: 150px;        /* 👈 change this */
+    height: 150px;
+
+    object-fit: cover;
+    border-radius: 50%;  /* circle */
+    margin: 10px auto 20px;
+    display: block;
+
+    border: 3px solid rgba(255,255,255,0.6);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+#welcomeUser {
+    display: inline-block;
+    margin-top: 7px;   /* 👈 increase to move lower */
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ADMIN APPROVAL PAGE - WIDER BOX */
+.admin-container {
+    width: 90%;
+    max-width: 1100px;
+}
+.card-approve {
+    background: url("../images/admin(1).jpg") center/cover no-repeat;
+}
+.approval-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.approval-table th,
+.approval-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.approve-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+button.reject {
+    background: #e74c3c;
+}
+/* PAGE HEADER */
+.approval-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    margin-bottom: 20px;
+
+    color: white;
+}
+
+.approval-page-header h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* REUSE BACK BUTTON */
+.back-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+body.approval-page {
+    display: block;
+    min-height: 100vh;
+}
+
+.approval-page-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.approval-card {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.profile-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.6);
+}
+
+.profile-container input,
+.profile-container button {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+}
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.login-container h3 {
+    margin-bottom: 10px;
+}
+.profile-page {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    width: 360px;
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.profile-card h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.6);
+}
+/* =======================
+   PROFILE PAGE FIXES
+======================= */
+.profile-card input,
+.profile-card button {
+    width: 50%;
+    display: block;
+}
+
+.profile-card input[type="file"] {
+    margin-bottom: 12px;
+    background: transparent;
+    color: white;
+}
+
+.profile-card button {
+    margin-top: 10px;
+}
+
+.profile-card .password-box {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.profile-card .password-box input {
+    padding-right: 40px;
+}
+
+.profile-card {
+    min-height: 420px;
+}
+
+.profile-page {
+    align-items: stretch;
+}
+
+/* =======================
+   PROFILE PAGE BODY FIX
+======================= */
+body.profile-body {
+    display: block;              /* ❗ cancel login centering */
+    align-items: unset;
+    justify-content: unset;
+    padding-top: 60px;
+}
+
+/* PROFILE FORM FIX */
+.profile-card input,
+.profile-card button {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+    height: auto;
+}
+
+/* FILE INPUT FIX */
+.profile-card input[type="file"] {
+    background: transparent;
+    color: white;
+}
+
+/* SAVE BUTTON */
+.profile-card button {
+    background: #4e73df;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ==========================
+   PROFILE PAGE HARD RESET
+========================== */
+
+body.profile-body {
+    display: block !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+}
+
+/* FORCE PROFILE PAGE GRID */
+.profile-page {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 40px !important;
+    padding: 60px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LOCK EVERYTHING INSIDE CARD */
+.profile-card {
+    display: block;
+}
+
+/* INPUT FIX */
+.profile-card input,
+.profile-card button {
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 12px;
+    height: auto !important;
+}
+
+/* FILE INPUT FIX */
+.profile-card input[type="file"] {
+    background: transparent;
+    color: white;
+}
+
+/* BACK LINK CENTER */
+.profile-card .link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: center;
+    vertical-align: middle; /* ✅ THIS IS THE KEY */
+    color: white;
+}
